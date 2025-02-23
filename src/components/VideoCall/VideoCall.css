@@ -1,0 +1,107 @@
+.video-call-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #FF6347;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF4500;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .controls button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #45a049;
+  }
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #local-video,
+  #remote-video {
+    width: 45%;
+    height: 250px;
+    background-color: #000;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  #local-video {
+    border: 2px solid #00FF00;
+  }
+  
+  #remote-video {
+    border: 2px solid #0000FF;
+  }
+  
+  #local-video::after {
+    content: 'You';
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #fff;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .video-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    #local-video,
+    #remote-video {
+      width: 80%;
+      height: 200px;
+    }
+  }
+  
